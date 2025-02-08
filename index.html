@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+    <title>Presente</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="passo ativo" id="passo-0">
+                <p>Quem está acessando?</p>
+                <button class="btn-proximo" data-proximo="1">
+                    <img src="img/IMG_20250204_121049.jpg" alt="Ícone">
+                    <span>Rafa</span>
+                </button>
+                <button class="btn-proximo" data-proximo="2">
+                    <img src="img/20af4549c7ddbe0e465c860f8d63e5e1.jpg" alt="Ícone">
+                    <span>Outro Usuário</span>
+                </button>
+            </div>
+            <div class="passo" id="passo-1">
+                <p>Digite a senha:</p>
+                <input type="password" id="senha" placeholder="Senha">
+                <button onclick="verificarSenha()">Enviar</button>
+                <span id="dica" class="dica-escondida">Dica: A senha é algo que voce sente por mim (digite como se estivesse falando para mim).</p>
+            </div>
+
+            <div class="passo" id="passo-3">
+                <img src="https://media-public.canva.com/OvCAE/MAEcStOvCAE/1/tl.png" alt="Ícone" class="sticker">
+                <p>Eu também te amo meu amor!</p>
+                <button class="btn-proximo" data-proximo="4">Ir para o presente</button>
+            </div>
+
+            <div class="passo" id="passo-2">
+                <img src="img/2f91fd68303741ca18d163f1c7fd2271.gif" alt="Ícone" class="sticker">
+                <p>Saia daqui intruso, isso é para o Rafa!</p>
+                <button class="btn-proximo" data-proximo="0">Voltar</button>
+            </div>
+            <div class="passo" id="passo-4">
+                <p>Nosso album de fotos!</p>
+                <section class="galeria">
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0011.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">12/02/2023</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0014.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">25/08/2022</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0015.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">14/11/2023</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0016.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">07/06/2021</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0017.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">19/09/2020</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0018.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">03/04/2023</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0019.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">28/07/2022</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0020.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">15/01/2024</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0021.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">09/05/2021</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0022.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">30/10/2023</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0023.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">21/12/2022</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0024.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">05/03/2020</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0025.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">11/08/2023</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0026.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">17/07/2021</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0027.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">02/09/2020</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0028.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">24/06/2022</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0029.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">08/11/2021</span>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="img/IMG-20250206-WA0030.jpg" alt="Ícone" class="galeria-img">
+                        <span class="galeria-texto">13/05/2020</span>
+                    </div>
+                </section>                
+                <button class="btn-proximo" data-proximo="0">Voltar</button>
+                <div id="modal" class="modal">
+                    <span class="fechar-modal">&times;</span>
+                    <img class="modal-conteudo" id="modal-img">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+    <script src="script.js"></script>

@@ -1,0 +1,271 @@
+
+body {
+    background: linear-gradient(to right, #f5a9b8, #a2d2ff);
+    height: 100%;
+    color: white;
+    font-family: "Cherry Bomb One", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+    -webkit-text-stroke: 1.5px #9b75e6;
+}
+
+button {
+    background-color: #e9dfff; 
+    border: 3px solid #9b75e6; 
+    border-radius: 8px; 
+    box-shadow: -6px 6px 0px rgba(0, 0, 0, 0.1); 
+    color: white; 
+    font-family: "Cherry Bomb One", serif; 
+    font-size: 23px; 
+    letter-spacing: -0.5px; 
+    -webkit-text-stroke: 1px #9b75e6; 
+    width: 250px; 
+    padding: 10px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    cursor: pointer;
+    margin: auto;
+    margin-bottom: 10px;
+    transition: all 0.2s ease; 
+    position: relative; 
+}
+
+button:hover {
+    background-color: #d0bfff; 
+    transform: translateY(-2px); 
+    box-shadow: -8px 8px 0px rgba(0, 0, 0, 0.1); 
+}
+
+button:active {
+    transform: translate(-4px, 4px); 
+    box-shadow: -2px 2px 0px rgba(0, 0, 0, 0.1); 
+}
+
+button img {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+    object-fit: cover; 
+    border: 2.5px solid #9b75e6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.passo {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.passo.ativo {
+    display: block;
+    position: relative;
+    justify-content: center;  
+    height: auto;
+    opacity: 1;
+}
+
+.passo#passo-4 {
+    padding-top: 20px; /* Ajuste conforme necessário */
+}
+
+main {
+    text-align: center;
+    max-width: 90%;
+}
+
+.sticker {
+    max-width: 15%;
+}
+
+/* Estilo para a tela de senha */
+#passo-1 input {
+    padding: 10px;
+    border: 3px solid #9b75e6;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+#passo-1 button {
+    margin-top: 10px;
+    width: 227px;
+}
+
+.dica-escondida {
+    display: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Estilo para a tela de sucesso e intruso */
+#passo-3, #passo-2 {
+    text-align: center;
+}
+
+#passo-3 p, #passo-2 p {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#dica {
+    font-size: 14px; /* Fonte menor */
+    margin-top: 10px; /* Espaço acima da dica */
+    text-align: center; /* Centralizado */
+    font-family: "Sniglet", serif;
+}
+
+/* Estilo da galeria */
+.galeria {
+    column-count: 4;
+    column-gap: 15px;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.galeria-item {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+.galeria-img {
+    width: 100%; /* Ajusta a largura da imagem ao tamanho da coluna */
+    display: block;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.galeria-item:hover .galeria-img {
+    filter: blur(5px);
+}
+
+.galeria-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.galeria-item:hover .galeria-texto {
+    opacity: 1;
+}
+
+.galeria-img:hover {
+    transform: scale(1.05);
+    filter: blur(5px);
+}
+
+.galeria .btn-proximo {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Espaço antes do final da tela */
+}
+
+.passo#passo-4 .btn-proximo {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* Estilo do modal */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.mostrar {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-conteudo {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fechar-modal:hover {
+    color: #c0c0c0;
+}
+
+@keyframes estrelas-caindo {
+    from {
+        transform: translateY(-10vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+.estrelas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1; 
+    overflow: hidden;
+}
+
+.estrela {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: estrelas-caindo linear infinite;
+}
